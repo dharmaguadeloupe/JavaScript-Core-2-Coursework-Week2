@@ -28,4 +28,5 @@ Render the list of books on the page. Each book should have a title, author and 
 - Change the style of the book depending on whether you have read it (green) or not (red).
 - All of your HTML should go inside the `<div>` with the id **"content"**.
 
-The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
+The end result should look something like this:
+https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/index.html

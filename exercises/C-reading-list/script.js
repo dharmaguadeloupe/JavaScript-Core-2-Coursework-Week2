@@ -1,5 +1,18 @@
 function readingList(books) {
-  // Write your code here...
+  
+ const content = document.getElementById("content");
+ const heading = document.createElement("h1");
+ heading.innerText = "Book list";
+ content.appendChild(heading);
+   const unorderedList = document.createElement("ul");
+  content.appendChild(unorderedList);
+
+  books.forEach(book => {
+    const bookListItem = document.createElement("li");
+    const bookTitle = document.createElement("p");
+
+  })
+
 }
 
 const books = [
