@@ -1,9 +1,31 @@
 function highlightWords(paragraph, colours) {
   const content = document.getElementById("content");
+
+  const paragraphText = document.createElement("p");
+  content.appendChild(paragraphText);
+
   const selection = document.createElement("select");
   content.appendChild(selection);
 
-  
+  for(const color of colours) {
+    const option = selection.appendChild(document.createElement("option"));
+    option.innerText = color;
+  }
+  const text = paragraph.split(" ");
+  text.forEach(word => {
+    const span = paragraphText.appendChild(document.createElement("span"));
+    span.className = "span";
+    span.innerText = word + " ";
+
+    function highlightedWord(event) {
+      if(selection.value !== "none") {
+        event.target.style.backgroundColor = selection.value;
+      } else {
+        event.target.style.backgroundColor = "";
+      }
+    }
+    span.addEventListener("click", highlightedWord);
+  });
 }
 
 const paragraph =
